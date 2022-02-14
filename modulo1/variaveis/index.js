@@ -1,12 +1,12 @@
 /*
     10 10 10
     
-
+*/
 
 let numeroHorasDia = prompt("Quantas horas voce trabalha?")
 let valorDia = prompt("Quanto voce recebe por dia ?");
 alert("Voce recebe $"+numeroHorasDia/valorDia + " por hora");
-*/
+
 
 //1//
 
@@ -60,4 +60,5 @@ x=n1+n2;
 y=n1*n2;
 console.log(x);
 console.log(y);
+
 
