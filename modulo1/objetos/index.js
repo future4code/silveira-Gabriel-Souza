@@ -58,7 +58,7 @@ function lista(pessoa)
 }
 
 
-
+//// 3 ////
 
 var carrinho = [] ;
 const fruta ={
