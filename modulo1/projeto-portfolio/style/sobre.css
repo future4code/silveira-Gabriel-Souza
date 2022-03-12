@@ -1,0 +1,75 @@
+
+* {
+margin: 0px  0px;
+padding: 0px 0px ;
+background-color: rgb(134, 134, 252);
+width: 100%;
+
+
+}
+header img{
+    padding: 0px 39%;
+    height: 300px;
+    width: 300px;
+    border-radius:50%;
+    border-radius: 80%;
+}
+.container-qualificacao img {
+    height: 200px;
+    width: 200px;
+    display:inline-block;
+    margin: 1% 10%;
+    border: solid;
+    border-color: black;
+    
+}
+
+#menu{
+ padding: 0px 39%;
+ font-size: 25px;
+}
+#informacoes b {
+    padding: 0px 45.5%;
+    font-size: 20px;
+    
+}
+#informacoes pre {
+    padding: 0px 25%;
+    font-size: 20px;
+    
+ 
+    
+}
+
+#redeSocial{
+    position: static;;
+    margin-top: 50px;
+}
+#informacoes{
+    padding: 10px 0px;
+}
+.container img {
+    max-width:30px;
+    max-height:30px;
+    width: auto;
+    height: auto;
+    
+    
+    
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(40, 7, 7);
+    color: #FFF;
+    width: 100%;
+    height: 30px;    
+    text-align: center;
+    line-height: 100px;
+}
+
+footer p{
+
+    position:relative;
+    
+}
