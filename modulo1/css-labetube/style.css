@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 1vw;
 
 }
 
@@ -11,34 +12,51 @@ header{
     background-color: mediumvioletred;
     justify-content: space-between;
     align-items: center;    
+    padding:  2vh 0vw;
+
+    width: 100vw;
  
-    padding:  30px;
 }
 header > div {
     display: flex;
+    justify-content: space-between;
+  
+
    
 
 }
 header > div > h3{
     font-family: Arial, Helvetica, sans-serif;
-    margin-left: 20px;
+    margin-left: 1vw;
     
     
 }
 
 
 #pesquisar{
-    height: 30px;
+    display: flex;
+    height: 3vh;
+    width: 18vw;
+  
 }
-header > button{
-    padding: 2px 16px;
+#pesquisar > #lname{
+width: 10vw ;
+
 }
+#pesquisar > button{
+    width: 5vw ;
+    margin-right: 2vw;
+
+    
+    }
+    
 
 /* Exercico 2 */
 body{
     display: flex;
     flex-direction: column;
     height: 100vh;
+
 }
 
 main{
@@ -50,19 +68,12 @@ main > div {
 }
 footer{
     background-color: mediumvioletred;
-    padding: 25px;
+    padding: 2vh;
 }
-/* Exercico 3 */
+
 
 main{
     display: flex;
-}
-#menu-1{
-    background-color: #f2d0e0;
-    width: 200px;
-    display: flex;
-    flex-direction: column;
-
 }
 
 main > div{
@@ -79,19 +90,103 @@ main > div{
     justify-items:center ;
  
 }
-#conteudo >div{
+#grid-item{
+    display: flex;
+    flex-direction: column;
     box-shadow: 0px 5px 10px black;
     background-color: aliceblue;
+    justify-items:center ;
     
-    margin-top: 10px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-#conteudo img{
-    width: 300px;
-    height: 250px;
+    margin-top: 0vh;
+    margin-bottom: 0vh;
 
+    padding: left 0vw;;
+    
+    text-align: center;
+    width: 20vw;
+    padding-bottom: 11vh;
+  
+
+}
+#conteudo video{
+    width: 20vw;
+    height: 26vh;
+    
+    
+}
+#conteudo h2{
+    width: 20vw;
+   
+
+    
 }
 footer{
     text-align: center;
+    width: 100vw;
+    
+    
 }
+
+@media screen and (max-device-width : 480px) {
+    /* celulares */
+
+   #conteudo{
+    display: flex;
+    flex-direction: column;
+       /*---- solução com grid -----*/
+       grid-template-columns: 1fr;
+       align-items: stretch;
+
+     
+
+       
+
+       /* ----solução com block ----*/
+        /* display: block; */
+
+        /* ----solução com flex----- */
+        /* display: flex;
+        flex-direction: column; */
+    }
+
+   
+    
+    #grid-item{
+        display: flex;
+        align-items: stretch;
+      
+        box-shadow: 0px 5px 10px black;
+        background-color: aliceblue;
+        justify-items:center ;
+        justify-self: center;
+        
+        margin-top: 0vh;
+        margin-bottom: 0vh;
+
+        padding: left 2vw;;
+        
+        text-align: center;
+        width: 90vw;
+        height: 25vh;
+        padding-bottom: 11vh;
+    
+
+    }
+    #conteudo video{
+        width: 90vw;
+        height: 90vh;
+        
+        
+    }
+    #conteudo h2{
+        width: 90vw;
+        text-align: ;
+    
+
+        
+    }
+   
+
+    
+}
+
