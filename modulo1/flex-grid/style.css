@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Execicio 1 */
+header{
+    display: flex;
+    background-color: mediumvioletred;
+    justify-content: space-between;
+    align-items: center;    
+    height: 50px;
+    padding:  10px;
+}
+header > div {
+    display: flex;
+   
+
+}
+header > div > h3{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10px;
+}
+
+header > div > img{
+    width: 20px;
+    height: auto;
+  
+}
+header > button{
+    padding: 2px 16px;
+}
+
+/* Exercico 2 */
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+main{
+    
+    flex-grow: 1;
+}
+footer{
+    background-color: mediumvioletred;
+}
+
+/* Exercico 3 */
+
+main{
+    display: flex;
+}
+#menu-1{
+    background-color: #f2d0e0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+
+}
+#menu-1 >div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+
+}
+#menu-1 >div> div{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+
+    height: 20px;
+
+}
+#menu-1 img{
+    width: 20px;
+    height: auto;
+     
+}
+
+#menu-1 h4{
+    margin-left: 10px; 
+}
+main > div{
+  
+    flex-grow: 1;
+}
+#conteudo {
+   
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    justify-items:center ;
+ 
+}
+#conteudo >div{
+    box-shadow: 0px 5px 10px black;
+    
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#conteudo img{
+    width: 300px;
+    height: 250px;
+
+}
+footer{
+    text-align: center;
+}
