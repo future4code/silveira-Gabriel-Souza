@@ -5,12 +5,27 @@ Esse repositório vai acompanhar vocês até o final do curso, para mantermos a 
 ```
 .
 ├── modulo1
-│   ├── nome-da-aula
-│   ├── nome-da-aula
-│   └── nome-do-projeto
+│   ├── Strings e Arrays
+│   ├── Funções
+│   ├── Projeto de Fixação: Lista de Introdução ao JavaScript
+│   ├── Objetos
+│   ├── Condicionais
+│   ├── Laços
+│   ├── Callback e Funções de Array
+│   ├── Projeto de Fixação: Blackjack
+│   ├── Revisão de Javascript
+│   ├── HTML: Elementos e Atributos
+│   ├── CSS (Parte 1)
+│   ├── CSS (Parte 2) e Dev Tools
+│   ├── Projeto de Fixação: Portfólio
+│   ├── Flexbox e Grid
+│   ├── Usando Flex e Grid na Prática
+│   ├── Responsividade
+│   ├── Acessibilidade
+│   └── Projeto de Fixação: Landing Page
 |
 ├── modulo2
-│   ├── nome-da-aula
+│   ├── Introdução ao React + JSX
 │   ├── nome-da-aula
 │   ├── nome-da-aula
 │   ├── nome-da-aula
