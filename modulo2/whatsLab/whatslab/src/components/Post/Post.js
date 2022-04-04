@@ -49,9 +49,6 @@ class Post extends React.Component {
         </PostHeader>
        
 
-
-     
-
        
         {componenteComentario}
       </PostContainer>

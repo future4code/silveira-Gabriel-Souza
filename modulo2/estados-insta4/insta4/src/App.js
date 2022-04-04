@@ -12,7 +12,7 @@ const insertContainer = styled.div`
   height: 40px;
   display: flex;
   align-items: center;
-  padding-left: 1000px;
+  padding-left: 100px;
   
 `
 
