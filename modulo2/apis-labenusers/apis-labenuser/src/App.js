@@ -1,41 +1,36 @@
-
-import './App.css';
-import React from 'react';
-import axios from "axios"
-
-const headers = {
-  headers:{
-    Authorization:"Gabriel-Menezes-Silvera"
-  }
-};
-
-const baseUrl ="https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users";
+import React from "react"
+import TelaCadastro from "./components/TelaCadastro"
+import TelaListaUsuarios from "./components/TelaListaUsuarios"
 
 export default class App extends React.Component {
-  state ={
-   userList : [],
-   inputName :"",
-   inputEMail:"",
+  state = {
+    telaAtual: "cadastro"
   }
 
-  componentDidMount()
-  {
- this.getAllUsers();
+  escolheTela = () => {
+    switch (this.state.telaAtual){
+      case "cadastro":
+        return <TelaCadastro irParaLista={this.irParaLista}/>
+      case "lista":
+        return <TelaListaUsuarios irParaCadastro={this.irParaCadastro}/>
+      default:
+        return <div>Erro! Página não encontrada :(</div>
+    }
   }
-  getAllUsers(){
-    url="https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users"
-    axios
-    .get(url,headers)
-    .then((res) => {
-      this.setState({
-        userList : res.data.result.list
-      });
-    })
-    .catch((err)=>{
-      console.log(err.response.data);
-    });
-  }
-  
-  
- }
 
+  irParaCadastro = () => {
+    this.setState({telaAtual: "cadastro"})
+  }
+
+  irParaLista = () => {
+    this.setState({telaAtual: "lista"})
+  }
+
+  render(){
+    return (
+      <div>
+        {this.escolheTela()}
+      </div>
+    )
+  }
+}
