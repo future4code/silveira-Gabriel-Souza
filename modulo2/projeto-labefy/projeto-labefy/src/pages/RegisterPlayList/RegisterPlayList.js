@@ -5,7 +5,8 @@ import { headers } from "../../constants/urls"
 export default class RegisterPlayList extends React.Component{
     state = {
         name:"",
-        playlist:[]
+        playlist:[],
+
     }
 
      handleNome = (event)=>{
@@ -31,6 +32,7 @@ export default class RegisterPlayList extends React.Component{
           alert(err.response.data.message)
       })
     }
+    
     render()
     {
         return(
