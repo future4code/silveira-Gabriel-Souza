@@ -17,7 +17,7 @@ export const InputsContainer = styled.div`
   margin-bottom: 20px;
 `
 
-export const LoginFormContainer = styled.div`
+export const SignUpFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 80vw;

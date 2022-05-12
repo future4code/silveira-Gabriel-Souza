@@ -1,19 +1,16 @@
 import React from "react"
-import {BrowserRouter,Switch, Route} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import PostPage from "../pages/PostPage/PostPage";
-import SingUpPage from "../pages/SingUpPage/SingUpPage";
+import SignUpPage from "../pages/SignUpPage/SignUpPage";
 import FeedPage from "../pages/FeedPage/FeedPage"
-import Header from "../components/Header/Header";
-
 
 
 const Router = () =>{
     return (
-        <BrowserRouter>
-        <Header> </Header>
-            <Switch >
+       
+             <Switch >
                 <Route  exact path = "/">
                     <FeedPage></FeedPage>
                  
@@ -29,7 +26,7 @@ const Router = () =>{
 
                 </Route>
                 <Route  exact path ="/Cadastro">
-                    <SingUpPage></SingUpPage>
+                    <SignUpPage></SignUpPage>
                  
 
                 </Route>
@@ -42,10 +39,9 @@ const Router = () =>{
             </Switch>
 
 
+    
         
         
-        
-        </BrowserRouter>
-    )
+       
 }
 export default Router

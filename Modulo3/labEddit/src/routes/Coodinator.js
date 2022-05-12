@@ -5,11 +5,11 @@ export const goToLoginPage =(history) => {
 export const goToFeedPage =(history) => {
     history.push("/")
 }
-export const PostPage =(history , id) => {
+export const goToPostPage =(history , id) => {
 history.push(`/Comentarios/${id}`)
 }
 
-export const SingUpPage =(history) => {
+export const goToSignUpPage =(history) => {
     history.push("/Cadastro")
 }
 
