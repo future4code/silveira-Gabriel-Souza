@@ -2,21 +2,23 @@ import Button from "@material-ui/core/Button"
 import React from "react";
 import { ScreenContainer ,SignUpButtonContainer} from "./styled";
 import LoginForm from "./loginForm"
-import {useHistory} from "react-router-dom"
+// import {useHistory} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import {goToSignUpPage} from "../../routes/Coodinator"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 
-const LoginPage = () => {
+const LoginPage = ({setRightButtonText }) => {
     useUnprotectedPage()
-    const history = useHistory()
+    // const history = useHistory()
+    const navigate = useNavigate();
 
     return (
         <ScreenContainer>
-                <LoginForm/>
+                <LoginForm  setRightButtonText={setRightButtonText} />
                 <SignUpButtonContainer>
                 <Button
-                    onClick = {()=>goToSignUpPage(history)}
+                    onClick = {()=>goToSignUpPage(navigate)}
                     type={"submit"}
                     fullWidth
                     variant={"text"}

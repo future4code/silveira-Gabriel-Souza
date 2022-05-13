@@ -1,19 +1,19 @@
-import React from "react";
-import Button from "@material-ui/core/Button"
-import useProtectedPage from "../../hooks/useProtectedPage";
+import React from 'react'
+import useProtectedPage from '../../hooks/useProtectedPage'
+import { ContainerPrincipal } from './styled'
+import ViewPost from './ViewPost'
+
 
 const FeedPage = () => {
-    useProtectedPage()
-    return (
-        <div>
-            <h1>FeedPage</h1>
-            {/* <Button variant="contained" color="secondary">
-             AAAAAAAAAAA
-            </Button> */}
-           
-        </div>
-    )
 
+    useProtectedPage()
+
+    return (
+
+        <ContainerPrincipal>
+            <ViewPost />
+        </ContainerPrincipal>
+    )
 }
 
 export default FeedPage

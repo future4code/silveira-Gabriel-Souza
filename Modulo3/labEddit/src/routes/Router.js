@@ -1,47 +1,35 @@
-import React from "react"
-import {Switch, Route} from "react-router-dom";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import PostPage from "../pages/PostPage/PostPage";
 import SignUpPage from "../pages/SignUpPage/SignUpPage";
-import FeedPage from "../pages/FeedPage/FeedPage"
+import FeedPage from "../pages/FeedPage/FeedPage";
 
+const Router = ({ setRightButtonText }) => {
+  return (
+    <Routes>
+      <Route path="/" element={<FeedPage></FeedPage>}></Route>
+      <Route
+        path="/Login"
+        element={
+          <LoginPage setRightButtonText={setRightButtonText}></LoginPage>
+        }
+      ></Route>
 
-const Router = () =>{
-    return (
-       
-             <Switch >
-                <Route  exact path = "/">
-                    <FeedPage></FeedPage>
-                 
+      <Route path="/Comentarios/:id" element={<PostPage></PostPage>}></Route>
 
-                </Route>
-                <Route exact path="/Login">
-                    <LoginPage ></LoginPage>                 
+      <Route
+        path="/Cadastro"
+        element={
+          <SignUpPage setRightButtonText={setRightButtonText}></SignUpPage>
+        }
+      ></Route>
 
-                </Route>
-                <Route exact path = "/Comentarios/:id">
-                    <PostPage ></PostPage>
-                 
-
-                </Route>
-                <Route  exact path ="/Cadastro">
-                    <SignUpPage></SignUpPage>
-                 
-
-                </Route>
-                <Route>
-                    <ErrorPage></ErrorPage>
-                 
-
-                </Route>
-               
-            </Switch>
-
-
-    
-        
-        
-       
-}
-export default Router
+      {/* <Route>
+        <ErrorPage></ErrorPage>
+      </Route> */}
+    </Routes>
+  );
+};
+export default Router;

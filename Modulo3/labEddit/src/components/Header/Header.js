@@ -4,11 +4,15 @@ import {StyledToolbar} from "./styled";
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { goToFeedPage , goToLoginPage } from '../../routes/Coodinator';
-import { useHistory} from 'react-router-dom';
+// import { useHistory} from 'react-router-dom';
+import {useNavigate} from "react-router-dom"
 
 
- const  Header = ()=> {
-    const history = useHistory()
+ const  Header = ( {rightButtonText ,setRightButtonText } )=> {
+  
+    const token = localStorage.getItem("token")
+    // const history = useHistory()
+    const navigate = useNavigate();
   
    
    
@@ -22,12 +26,13 @@ import { useHistory} from 'react-router-dom';
     const rightButtonAction = () =>{
       if(token)
       {
+     
         logout()
         setRightButtonText("Login")
-        goToLoginPage(history)
+        goToLoginPage(navigate)
       }else
       {
-        goToLoginPage(history)
+        goToLoginPage(navigate)
       }
     }
 
@@ -38,8 +43,8 @@ import { useHistory} from 'react-router-dom';
          
          
             
-            <Button onClick={()=>goToFeedPage(history)} color="inherit">labEddit</Button>
-          <Button onClick={()=>rightButtonAction} color="inherit">{rightButtonText}</Button>
+            <Button onClick={()=>goToFeedPage(navigate)} color="inherit">labEddit</Button>
+          <Button onClick={rightButtonAction} color="inherit">{rightButtonText}</Button>
         </StyledToolbar>
       </AppBar>
    

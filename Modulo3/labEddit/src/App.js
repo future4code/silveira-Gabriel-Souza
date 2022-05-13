@@ -4,7 +4,7 @@ import { ThemeProvider } from "@material-ui/core/styles";
 import theme from "./constants/theme";
 import Router from "./routes/Router"
 import {BrowserRouter} from "react-router-dom"
-import Header from "./component/Header/Header"
+import Header from "./components/Header/Header"
 
 function App() {
 
@@ -18,8 +18,8 @@ function App() {
    
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Header> </Header>
-        <Router></Router>
+        <Header rightButtonText={rightButtonText} setRightButtonText={setRightButtonText}> </Header>
+        <Router  setRightButtonText={setRightButtonText}> </Router>
       </BrowserRouter>
 
       

@@ -1,16 +1,22 @@
-export const goToLoginPage =(history) => {
-    history.push("/Login")
+import {useNavigate} from "react-router-dom"
+
+
+
+
+export const goToLoginPage =(navigate) => {
+    navigate("/Login")
 }
 
-export const goToFeedPage =(history) => {
-    history.push("/")
+export const goToFeedPage =(navigate) => {
+    //console.log("fui chamado ")
+    navigate("/")
 }
-export const goToPostPage =(history , id) => {
-history.push(`/Comentarios/${id}`)
+export const goToPostPage =(navigate, id) => {
+navigate(`/Comentarios/${id}`)
 }
 
-export const goToSignUpPage =(history) => {
-    history.push("/Cadastro")
+export const goToSignUpPage =(navigate) => {
+    navigate("/Cadastro")
 }
 
 

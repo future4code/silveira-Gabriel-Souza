@@ -2,17 +2,19 @@
 import React from "react";
 import { ScreenContainer } from "./styled";
 import SignUpForm from "./SignUpForm"
-import {useHistory} from "react-router-dom"
+// import {useHistory} from "react-router-dom"
+import {useNavigate} from "react-router-dom"
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
 
-const SignUpPage = () => {
+const SignUpPage = ({setRightButtonText }) => {
     useUnprotectedPage()
-    const history = useHistory()
+    // const history = useHistory()
+    const navigate = useNavigate();
 
     return (
         <ScreenContainer>
-                <SignUpForm/>
+                <SignUpForm setRightButtonText={setRightButtonText} />
         </ScreenContainer>
     )
 
