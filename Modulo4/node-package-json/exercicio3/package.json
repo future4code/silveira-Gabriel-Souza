@@ -1,0 +1,13 @@
+{
+  "name": "aula-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "exercicio.js",
+  "scripts": {
+ 
+   
+  "start":"node ./exercicio.js" },
+  "keywords": [],
+  "author": "Gabriel Menezes",
+  "license": "ISC"
+}
