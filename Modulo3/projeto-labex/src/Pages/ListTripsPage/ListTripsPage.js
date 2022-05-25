@@ -30,15 +30,27 @@ const ListTripsPage = () => {
 //       getTrips();
 //     }, []);    
      
-    
-  useEffect(()=>{
-    axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/Gabriel-Souza-Silvera/trips")
-    .then((res)=>{
-      // console.log(res.data.trips)
-      setListTrip(res.data.trips)
-      // console.log(listTrips) 
-    });
-  },[])
+
+const getTrips=()=>
+{
+  axios.get("https://us-central1-labenu-apis.cloudfunctions.net/labeX/Gabriel-Souza-Silvera/trips")
+  .then((res)=>{
+    setListTrip(res.data.trips)
+  })
+}
+const options = listTrips.map(e=>{
+  return(
+    <div> Nome : {e.name}  Descricação : {e.description}
+          {/* {e.date}
+          {e.durationInDays}
+          {e.planet} */}
+     </div>
+  )
+})
+
+useEffect(()=>{
+  getTrips()
+},[])
 
   console.log(listTrips) 
   return (
@@ -52,6 +64,7 @@ const ListTripsPage = () => {
           return <> <h4> {trip.name} </h4>  <button>    APAGAR </button> </>
         })} 
       </> }  */}
+      {options}
          
     </>
   );
