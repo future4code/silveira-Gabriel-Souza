@@ -9,7 +9,11 @@
     "start3": "tsc && node ./build/exercicio3.js",
     "start4": "tsc && node ./build/exercicio4.js",
     "start5": "tsc && node ./build/exercicio5.js",
-    "start6": "tsc && node ./build/exercicio6.js"
+    "start6": "tsc && node ./build/exercicio6.js",
+    "start7": "tsc && node ./build/exercicio7.js",
+    "start8": "tsc && node ./build/exercicio8.js",
+    "start9": "tsc && node ./build/exercicio9.js",
+    "start10": "tsc && node ./build/exercicio10.js"
 
     
   },
@@ -20,3 +24,4 @@
     "typescript": "^4.5.4"
   }
 }
+
