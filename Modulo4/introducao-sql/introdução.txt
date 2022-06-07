@@ -1,0 +1,8 @@
+-- 3
+select * from Actor where gender= "female" , 
+select salary   from Actor where  name ="Tony Ramos"
+select * from Actor where gender="invalid"
+
+select id , name ,salary from Actor where salary<500
+
+SELECT id, name from Actor WHERE id = "002"
