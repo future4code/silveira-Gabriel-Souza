@@ -3,9 +3,36 @@ POST http://localhost:3003/signup
 Content-Type: application/json
 
 {
-    "name": "Gabriel",
-    "email": "gabriel@gmail.com",
+    "name": "ana",
+    "email": "ana@gmail.com",
     "password": "123456"
-    
+
 }
+###
+# @name login
+POST http://localhost:3003/login
+Content-Type: application/json
+
+{    
+    "email": "ana@gmail.com",
+    "password": "123456"     
+}
+
+###
+POST http://localhost:3003/post/create
+Authorization: {{login.response.body.token}}
+Content-Type: application/json
+
+{    
+    "photo":"bbbbbbbb",    
+    "description":"bbbbbbbb",
+    "type":"event",
+    "createdAt":"2022-07-06 22:42:48"  
+      
+}
+###
+GET http://localhost:3003/post/:id
+Authorization: {{login.response.body.token}}
+
+
 
